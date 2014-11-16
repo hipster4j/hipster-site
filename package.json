@@ -1,0 +1,47 @@
+{
+  "name": "hipster4j",
+  "description": "An Open Source Java Library for Heuristic Search.",
+  "version": "1.0.0-rc1",
+  "homepage": "http://www.hipster4j.org",
+  "author": {
+    "name": "Pablo Rodríguez Mier",
+    "url": "http://github.com/pablormier/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/citiususc/hipster.git"
+  },
+  "bugs": {
+    "url": "https://github.com/citiususc/hipster/issues"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "test": "grunt assemble"
+  },
+  "devDependencies": {
+    "assemble": "^0.4.42",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^1.0.0"
+  },
+  "licenses": [
+    {
+      "type": "Apache 2.0",
+      "url": "https://github.com/citiususc/hipster/blob/development/LICENSE"
+    }
+  ],
+  "keywords": [
+    "assemble",
+    "templates",
+    "handlebars",
+    "site generator",
+    "site builder",
+    "grunt"
+  ]
+}

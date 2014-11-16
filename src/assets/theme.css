@@ -1,0 +1,183 @@
+
+
+/* ==========================================================================
+   Hipster4j custom style
+   ========================================================================== */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  /* Fix the sticky footer position */
+  margin-bottom: 60px;
+  font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+a {
+  color: #5387B4;
+}
+
+.jumbotron {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+  ), url(img/dijkstra-background.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  min-height: 360px;
+
+  /* Separate it from the navbar fixed position */
+  margin-top: 50px;
+}
+
+.main-hipster-logo {
+  margin: 30px 30px;
+}
+
+.navbar {
+  background-color: white;
+  opacity: 0.96;
+  border-color: #E7E7E7;
+}
+
+.background-pattern {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACZJREFUeNpi/PTpEwMY8PLyMsFZnz9/ZoKzgAzG////Q1hAABBgAFeiDto+NxIZAAAAAElFTkSuQmCC') repeat;
+}
+
+.version {
+  font-size: 12px;
+}
+
+code {
+  color: #CC5627;
+}
+
+.panel-primary {
+  border-color: #435a6e;;
+}
+
+.panel-primary > .panel-heading {
+  background-color: #435a6e;
+  border-color: #435a6e;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #2B2B2B;
+  /*background-color: #435a6e;*/
+  color: #B2B2B2;
+}
+
+.footer-text {
+  margin-top: 20px;
+}
+
+.footer-brand {
+  display: block;
+  margin: 5px 10px 0px 0px;
+  float: left;
+  clear: both;
+}
+
+/* ==========================================================================
+   Youtube embed video
+   ========================================================================== */
+
+.video-tutorial {
+  padding-bottom: 30px;
+}
+
+.embed-video-thumbnail {
+  opacity: 1.0;
+}
+
+.embed-video-thumbnail:hover {
+  opacity: 0.95;
+}
+
+.embed-frame {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  /*z-index: 10;*/
+}
+
+.play-video-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -35px;
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Bootstrap callouts
+   ========================================================================== */
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code {
+  border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+  margin-top: -5px;
+}
+.bs-callout-default {
+  border-left-color: #777;
+}
+.bs-callout-default h4 {
+  color: #777;
+}
+.bs-callout-primary {
+  border-left-color: #435a6e;
+}
+.bs-callout-primary h4 {
+  color: #435a6e;
+}
+.bs-callout-success {
+  border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+  color: #5cb85c;
+}
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+.bs-callout-info {
+  border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+  color: #5bc0de;
+}

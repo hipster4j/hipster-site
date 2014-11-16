@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>{{title}} | {{site.title}}</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="{{assets}}/css/bootstrap.min.css">
+
+      <!-- Bootstrap theme -->
+      <!--<link href="{{assets}}/css/bootstrap-theme.min.css" rel="stylesheet">-->
+
+      <!-- Custom styles for this template -->
+      <link href="{{assets}}/css/theme.css" rel="stylesheet">
+
+      <!-- Font Awesome -->
+      <link href="{{assets}}/css/font-awesome.min.css" rel="stylesheet">
+
+      <!-- Open Sans font from Google Fonts -->
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+      <!-- TODO: Bower grunt-modernizr -->
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+      your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {{> navbar-fixed-top }}
+
+    {{> body }}
+
+    {{> footer }}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{assets}}/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{assets}}/js/bootstrap.min.js"></script>
+
+    {{#if index}}
+      <!-- Get current lib src version -->
+      <script>
+          $(function(){
+              $.getJSON('https://api.github.com/repos/citiususc/hipster/tags', function(data) {
+                  // take the last tag from GitHub
+                  $('span.version').append('(' + data[0].name + ')');
+                  // set the corresponding url to the zip archive
+                  $('a#download-release').attr('href', data[0].zipball_url);
+              });
+          });
+      </script>
+    {{/if}}
+  </body>
+</html>
