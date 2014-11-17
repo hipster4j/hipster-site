@@ -89,9 +89,13 @@ body > .container.top {
 
 .footer-brand {
   display: block;
-  margin: 5px 10px 0px 0px;
+  margin: 15px 10px 0px 0px;
   float: left;
   clear: both;
+}
+
+.footer-brand > img {
+  max-width: 30px;
 }
 
 /* ==========================================================================
