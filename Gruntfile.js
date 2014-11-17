@@ -110,6 +110,12 @@ module.exports = function(grunt) {
         cwd: 'bower_components/jquery/dist',
         src: '**',
         dest: '<%= config.dist %>/assets/js'
+      },
+      libs: {
+        expand: true,
+        cwd: 'src/lib/',
+        src: '**/*.js',
+        dest: '<%= config.dist %>/assets/js'
       }
     },
 
