@@ -50,7 +50,7 @@
     <script src="{{assets}}/js/bootstrap.min.js"></script>
 
     {{! Use RequireJS to avoid this dirty tricks }}
-    {{#if index}}
+    {{#is basename "index"}}
       <!-- Load the youtube thumbnail script -->
         <script src="{{assets}}/js/embed-thumbnail.js"></script>
       <!-- Get current lib src version -->
@@ -64,6 +64,6 @@
               });
           });
       </script>
-    {{/if}}
+    {{/is}}
   </body>
 </html>
