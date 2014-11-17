@@ -20,6 +20,15 @@ a {
   color: #5387B4;
 }
 
+code {
+  color: #CC5627;
+}
+
+/* Fix the position of the top container due to the sticky footer + fixed navbar */
+body > .container.top {
+  padding: 60px 15px 0;
+}
+
 .jumbotron {
   background: linear-gradient(
     rgba(0, 0, 0, 0.65),
@@ -53,10 +62,6 @@ a {
 
 .version {
   font-size: 12px;
-}
-
-code {
-  color: #CC5627;
 }
 
 .panel-primary {
