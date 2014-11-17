@@ -26,7 +26,7 @@ code {
 
 /* Fix the position of the top container due to the sticky footer + fixed navbar */
 body > .container.top {
-  padding: 60px 15px 0;
+  padding: 60px 15px 20px;
 }
 
 .jumbotron {
@@ -77,7 +77,7 @@ body > .container.top {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   background-color: #2B2B2B;
   /*background-color: #435a6e;*/
   color: #B2B2B2;
@@ -85,18 +85,35 @@ body > .container.top {
 
 .footer-text {
   margin-top: 20px;
+  float: left;
 }
 
 .footer-brand {
   display: block;
   margin: 15px 10px 0px 0px;
   float: left;
-  clear: both;
+  /*clear: both;*/
 }
 
-.footer-brand > img {
+.footer-brand > img.citius-logo {
   max-width: 30px;
 }
+
+.footer-brand.right {
+  float: right;
+}
+
+.jprofiler-logo {
+  display: block;
+  width: 108px;
+  height: 29px;
+  background: url(img/jprofiler-logo-grey.png) no-repeat;
+}
+
+.jprofiler-logo:hover {
+  background: url(img/jprofiler-logo-white.png) no-repeat;
+}
+
 
 /* ==========================================================================
    Youtube embed video
