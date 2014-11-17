@@ -19,9 +19,11 @@ component: navbar
             <!-- navigation menus -->
             <ul class="nav navbar-nav navbar-right">
               {{#each pages}}
-                  <li{{#if this.isCurrentPage}} class="active"{{/if}}>
-                      <a href="{{relative dest this.dest}}">{{ data.title }}</a>
-                  </li>
+                  {{#isnt this.basename "index"}}
+                    <li{{#if this.isCurrentPage}} class="active"{{/if}}>
+                        <a href="{{relative dest this.dest}}">{{ data.title }}</a>
+                    </li>
+                  {{/isnt}}
               {{/each}}
             </ul>
         </div>
