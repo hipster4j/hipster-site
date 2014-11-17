@@ -5,6 +5,9 @@
  *
  * Copyright (c) 2014 Hariadi Hinta
  * Licensed under the MIT license.
+ *
+ * Template adapted to generate Hipster's main page.
+ * Pablo Rodríguez Mier.
  */
 
 'use strict';
@@ -63,7 +66,9 @@ module.exports = function(grunt) {
       }
     },
 
+    // Assemble task
     assemble: {
+      // Target pages
       pages: {
         options: {
           flatten: true,
