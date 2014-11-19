@@ -107,11 +107,12 @@ body > .container.top {
   display: block;
   width: 108px;
   height: 29px;
-  background: url(img/jprofiler-logo-grey.png) no-repeat;
+  background: url(img/jprofiler-brand.png) no-repeat top left;
+
 }
 
 .jprofiler-logo:hover {
-  background: url(img/jprofiler-logo-white.png) no-repeat;
+  background: url(img/jprofiler-brand.png) no-repeat 0 -39px;
 }
 
 
