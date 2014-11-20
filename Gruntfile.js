@@ -120,7 +120,26 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'src/lib/',
         src: '**/*.js',
-        dest: '<%= config.dist %>/assets/js'
+        dest: '<%= config.dist %>/js'
+      }
+    },
+
+    cssmin: {
+      combine: {
+          src: ['<%= config.dist %>/assets/css/**/*.css', '!<%= config.dist %>/assets/css/**/*.min.css'],
+          dest: '<%= config.dist %>/assets/css/style.min.css'
+      }
+    },
+
+    processhtml: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>/',
+          src: ['**/*.html'],
+          dest: '<%= config.dist %>/',
+          ext: '.html'
+        }]
       }
     },
 
@@ -131,6 +150,20 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('assemble');
+
+  grunt.loadNpmTasks('grunt-uncss');
+
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+
+  grunt.loadNpmTasks('grunt-processhtml');
+
+
+  grunt.registerTask('optimize', [
+    'cssmin',
+    'processhtml'
+  ]);
 
   grunt.registerTask('server', [
     'build',

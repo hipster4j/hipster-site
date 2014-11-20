@@ -14,17 +14,11 @@
       <meta name="description" content="{{description}}">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Bootstrap core CSS -->
+      <!-- build:css {{assets}}/css/style.min.css -->
       <link rel="stylesheet" href="{{assets}}/css/bootstrap.min.css">
-
-      <!-- Bootstrap theme -->
-      <!--<link href="{{assets}}/css/bootstrap-theme.min.css" rel="stylesheet">-->
-
-      <!-- Custom styles for this template -->
       <link href="{{assets}}/css/theme.css" rel="stylesheet">
-
-      <!-- Font Awesome -->
       <link href="{{assets}}/css/font-awesome.min.css" rel="stylesheet">
+      <!-- /build -->
 
       <!-- Open Sans font from Google Fonts -->
       <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
@@ -52,7 +46,7 @@
     {{! Use RequireJS to avoid this dirty tricks }}
     {{#is basename "index"}}
       <!-- Load the youtube thumbnail script -->
-        <script src="{{assets}}/js/embed-thumbnail.js"></script>
+      <script src="lib/embed-thumbnail.js"></script>
       <!-- Get current lib src version -->
       <script>
           $(function(){
