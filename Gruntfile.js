@@ -115,7 +115,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'bower_components/jquery/dist',
         src: '**',
-        dest: '<%= config.dist %>/assets/js'
+        dest: '<%= config.dist %>/lib/jquery'
       },
       libs: {
         expand: true,
@@ -146,6 +146,14 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+      dist: {
+        files: {
+          '<%= config.dist %>/lib/helpers.min.js': ['<%= config.dist %>/lib/*.js']
+        }
+      }
+    },
+
     // Before generating any new files,
     // remove any previously-created files.
     clean: ['<%= config.dist %>/**/*.{html,xml}']
@@ -161,13 +169,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-processhtml');
 
 
+  // Minify CSS files and javascript helper files and replace
+  // urls with grunt-processhtml
   grunt.registerTask('optimize', [
     'cssmin',
+    'uglify',
     'processhtml'
   ]);
 
   grunt.registerTask('server', [
     'build',
+    'optimize',
     'connect:livereload',
     'watch'
   ]);

@@ -38,16 +38,20 @@
     {{> footer }}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="{{assets}}/js/jquery.min.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{assets}}/js/bootstrap.min.js"></script>
+    <script src="lib/jquery/bootstrap.min.js"></script>
 
-    {{! Use RequireJS to avoid this dirty tricks }}
+    {{! TODO: Use RequireJS }}
+    {{! Load only helper scripts in the index page.
+    These scripts are minified with grunt-uglify and replaced by grunt-processhtml}}
     {{#is basename "index"}}
-      <!-- Load the youtube thumbnail script -->
-      <script src="lib/embed-thumbnail.js"></script>
-      <!-- Get current lib src version -->
-      <script src="lib/version-finder.js"></script>
+      <!-- build:js lib/helpers.min.js -->
+        <!-- Load the youtube thumbnail script -->
+        <script src="lib/embed-thumbnail.js"></script>
+        <!-- Get current lib src version -->
+        <script src="lib/version-finder.js"></script>
+      <!-- /build -->
     {{/is}}
   </body>
 </html>
