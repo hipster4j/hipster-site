@@ -121,7 +121,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'src/lib/',
         src: '**/*.js',
-        dest: '<%= config.dist %>/js'
+        dest: '<%= config.dist %>/lib'
       }
     },
 

@@ -20,9 +20,8 @@
       <link href="{{assets}}/css/font-awesome.min.css" rel="stylesheet">
       <!-- /build -->
 
-      <!-- Open Sans font from Google Fonts -->
-      <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
       <!-- TODO: Bower grunt-modernizr -->
   </head>
 
@@ -48,16 +47,7 @@
       <!-- Load the youtube thumbnail script -->
       <script src="lib/embed-thumbnail.js"></script>
       <!-- Get current lib src version -->
-      <script>
-          $(function(){
-              $.getJSON('https://api.github.com/repos/citiususc/hipster/tags', function(data) {
-                  // take the last tag from GitHub
-                  $('span.version').append('(' + data[0].name + ')');
-                  // set the corresponding url to the zip archive
-                  $('a#download-release').attr('href', data[0].zipball_url);
-              });
-          });
-      </script>
+      <script src="lib/version-finder.js"></script>
     {{/is}}
   </body>
 </html>
