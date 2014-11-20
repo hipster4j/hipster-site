@@ -31,7 +31,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-modernizr": "^0.6.0",
     "grunt-processhtml": "^0.3.3",
-    "grunt-uncss": "^0.3.7",
     "load-grunt-tasks": "^0.6.0",
     "time-grunt": "^1.0.0"
   },

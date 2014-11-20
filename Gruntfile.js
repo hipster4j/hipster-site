@@ -83,6 +83,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Copy task for the different libraries used within the webpage
     copy: {
       bootstrap: {
         expand: true,
@@ -124,6 +125,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Combine and reduce all the css under assets/css into style.min.css
     cssmin: {
       combine: {
           src: ['<%= config.dist %>/assets/css/**/*.css', '!<%= config.dist %>/assets/css/**/*.min.css'],
@@ -131,6 +133,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Replace in all html files the css styles used in dev by the new style.min.css
     processhtml: {
       dist: {
         files: [{
@@ -150,8 +153,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('assemble');
-
-  grunt.loadNpmTasks('grunt-uncss');
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
