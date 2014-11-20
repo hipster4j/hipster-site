@@ -154,6 +154,39 @@ module.exports = function(grunt) {
       }
     },
 
+    modernizr: {
+
+      dist: {
+        devFile : '<%= config.dist %>/lib/modernizr/modernizr-dev.js',
+        outputFile : '<%= config.dist %>/lib/modernizr/modernizr-custom.js',
+
+        extra: {
+          shiv: true,
+          printshiv: false,
+          load: true,
+          mq: false,
+          cssclasses: true
+        },
+
+        extensibility : {
+          addtest : false,
+          prefixed : false,
+          teststyles : false,
+          testprops : false,
+          testallprops : false,
+          hasevents : false,
+          prefixes : false,
+          domprefixes : false,
+          cssclassprefix: ""
+        },
+
+        uglify : true,
+        parseFiles : true,
+        matchCommunityTests : false
+      }
+
+    },
+
     // Before generating any new files,
     // remove any previously-created files.
     clean: ['<%= config.dist %>/**/*.{html,xml}']
@@ -174,6 +207,7 @@ module.exports = function(grunt) {
   grunt.registerTask('optimize', [
     'cssmin',
     'uglify',
+    'modernizr',
     'processhtml'
   ]);
 

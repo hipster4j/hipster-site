@@ -29,7 +29,7 @@
     "grunt-contrib-cssmin": "^0.10.0",
     "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-modernizr": "^0.6.0",
+    "grunt-modernizr": "https://registry.npmjs.org/grunt-modernizr/-/grunt-modernizr-0.6.0.tgz",
     "grunt-processhtml": "^0.3.3",
     "load-grunt-tasks": "^0.6.0",
     "time-grunt": "^1.0.0"
