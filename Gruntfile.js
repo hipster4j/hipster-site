@@ -115,21 +115,21 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'bower_components/jquery/dist',
         src: '**',
-        dest: '<%= config.dist %>/lib/jquery'
+        dest: '<%= config.dist %>/assets/js'
       },
       libs: {
         expand: true,
         cwd: 'src/lib/',
         src: '**/*.js',
-        dest: '<%= config.dist %>/lib'
+        dest: '<%= config.dist %>/assets/js/custom'
       }
     },
 
     // Combine and reduce all the css under assets/css into style.min.css
     cssmin: {
       combine: {
-          src: ['<%= config.dist %>/assets/css/**/*.css', '!<%= config.dist %>/assets/css/**/*.min.css'],
-          dest: '<%= config.dist %>/assets/css/style.min.css'
+          src: ['<%= config.dist %>/assets/css/custom/**/*.css', '!<%= config.dist %>/assets/css/custom/**/*.min.css'],
+          dest: '<%= config.dist %>/assets/css/custom/style.min.css'
       }
     },
 
@@ -149,16 +149,15 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= config.dist %>/lib/helpers.min.js': ['<%= config.dist %>/lib/*.js']
+          '<%= config.dist %>/assets/js/custom/helpers.min.js': ['<%= config.dist %>/assets/js/custom/*.js']
         }
       }
     },
 
     modernizr: {
-
       dist: {
-        devFile : '<%= config.dist %>/lib/modernizr/modernizr-dev.js',
-        outputFile : '<%= config.dist %>/lib/modernizr/modernizr-custom.js',
+        devFile : '<%= config.dist %>/assets/js/custom/modernizr/modernizr-dev.js',
+        outputFile : '<%= config.dist %>/assets/js/custom/modernizr/modernizr-custom.js',
 
         extra: {
           shiv: true,

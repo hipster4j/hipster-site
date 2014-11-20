@@ -13,18 +13,19 @@
       <title>{{title}} | {{site.title}}</title>
       <meta name="description" content="{{description}}">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Language" content="en">
 
-      <!-- build:css {{assets}}/css/style.min.css -->
       <link rel="stylesheet" href="{{assets}}/css/bootstrap.min.css">
-      <link href="{{assets}}/css/theme.css" rel="stylesheet">
       <link href="{{assets}}/css/font-awesome.min.css" rel="stylesheet">
+      <!-- build:css {{assets}}/css/custom/style.min.css -->
+      <link href="{{assets}}/css/custom/theme.css" rel="stylesheet">
       <!-- /build -->
-
-      <!-- build:js lib/modernizr/modernizr-custom.js -->
-      <script src="lib/modernizr/modernizr-dev.js"></script>
-      <!-- /build -->
-
       <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+      <!-- build:js {{assets}}/js/custom/modernizr/modernizr-custom.js -->
+      <script src="{{assets}}/js/custom/modernizr/modernizr-dev.js"></script>
+      <!-- /build -->
+
   </head>
 
   <body>
@@ -40,19 +41,19 @@
     {{> footer }}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="{{assets}}/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="lib/jquery/bootstrap.min.js"></script>
+    <script src="{{assets}}/js/bootstrap.min.js"></script>
 
     {{! TODO: Use RequireJS }}
     {{! Load only helper scripts in the index page.
     These scripts are minified with grunt-uglify and replaced by grunt-processhtml}}
     {{#is basename "index"}}
-      <!-- build:js lib/helpers.min.js -->
+      <!-- build:js {{assets}}/js/custom/helpers.min.js -->
         <!-- Load the youtube thumbnail script -->
-        <script src="lib/embed-thumbnail.js"></script>
+        <script src="{{assets}}/js/custom/embed-thumbnail.js"></script>
         <!-- Get current lib src version -->
-        <script src="lib/version-finder.js"></script>
+        <script src="{{assets}}/js/custom/version-finder.js"></script>
       <!-- /build -->
     {{/is}}
 
