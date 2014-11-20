@@ -180,6 +180,15 @@ module.exports = function(grunt) {
           cssclassprefix: ""
         },
 
+        files : {
+          src: [
+            "*[^(g|G)runt(file)?].{js,css,scss,sass}",
+            "**[^node_modules]/**/*.{js,css,scss,sass}",
+            "!lib/cache/**/*",
+            "!lib/gruntifier.js",
+            "!**/modernizr-dev.js"
+          ]
+        },
         uglify : true,
         parseFiles : true,
         matchCommunityTests : false
@@ -189,7 +198,7 @@ module.exports = function(grunt) {
 
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: ['<%= config.dist %>/**/*.{html,xml,css,js}']
 
   });
 
