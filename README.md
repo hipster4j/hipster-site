@@ -1,6 +1,8 @@
 # Hipster Web
 
-This is the source code of the [main web site](http://www.hipster4j.org). The site is built using Yeoman, Grunt and Assemble.
+This is the source code of the [main web site](http://www.hipster4j.org). 
+The site is built using [Yeoman](http://yeoman.io/), [Grunt](http://gruntjs.com/), [Assemble](http://assemble.io/)
+and other "hipster" tools.
 
 ## Build
 
