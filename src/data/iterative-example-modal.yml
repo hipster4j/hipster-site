@@ -1,4 +1,10 @@
 modal:
-  label: "iterative-example-lb"
-  title: "Iterative search example"
-  mdcontent: "templates/assets/content/iterative-example.md"
+modal:
+  label: "iterative-example-modal"
+  id: "iterative-example-modal"
+  title: "Iterative algorithms"
+  contentType: "include"
+  content: "iterative-example"
+  hasDefaultButton: false
+  hasPrimaryButton: true
+  primaryButtonLabel: "Close"

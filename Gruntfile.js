@@ -68,6 +68,11 @@ module.exports = function(grunt) {
 
     // Assemble task
     assemble: {
+      // https://github.com/helpers/handlebars-helper-include
+      options: {
+        helpers: ['handlebars-helper-include', '<%= config.src %>/includes/*.hbs'],
+        includes: ['<%= config.src %>/includes/*.hbs']
+      },
       // Target pages
       pages: {
         options: {

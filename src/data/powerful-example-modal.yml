@@ -1,0 +1,9 @@
+modal:
+  label: "powerful-example-modal"
+  id: "powerful-example-modal"
+  title: "Define problems declaratively"
+  contentType: "include"
+  content: "powerful-example"
+  hasDefaultButton: false
+  hasPrimaryButton: true
+  primaryButtonLabel: "Close"

@@ -7,11 +7,35 @@
                 <h4 class="modal-title" id="{{modal.label}}">{{modal.title}}</h4>
             </div>
             <div class="modal-body">
-                {{md modal.mdcontent}}
+              {{#is modal.contentType "markdown"}}
+                {{md modal.content}}
+              {{/is}}
+
+              {{#is modal.contentType "gist"}}
+                {{gist modal.content}}
+              {{/is}}
+
+              {{#is modal.contentType "raw"}}
+                {{include modal.content}}
+              {{/is}}
+
+              {{#is modal.contentType "other"}}
+                {{embed modal.content}}
+              {{/is}}
+
+              {{#is modal.contentType "include"}}
+                {{include modal.content}}
+              {{/is}}
+
+
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">{{modal.defaultButtonLabel}}</button>
-                <button type="button" class="btn btn-primary">{{modal.primaryButtonLabel}}</button>
+                {{#is modal.hasDefaultButton true}}
+                  <button type="button" class="btn btn-default" data-dismiss="modal">{{modal.defaultButtonLabel}}</button>
+                {{/is}}
+                {{#is modal.hasPrimaryButton true}}
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">{{modal.primaryButtonLabel}}</button>
+                {{/is}}
             </div>
         </div>
     </div>
