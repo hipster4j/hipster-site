@@ -90,6 +90,12 @@ module.exports = function(grunt) {
 
     // Copy task for the different libraries used within the webpage
     copy: {
+      extra: {
+        expand: true,
+        cwd: 'src/extra/',
+        src: '**',
+        dest: '<%= config.dist %>/'
+      },
       bootstrap: {
         expand: true,
         cwd: 'bower_components/bootstrap/dist/',
