@@ -46,6 +46,10 @@ body > .container.top {
   margin-top: 50px;
 }
 
+.navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
 .main-hipster-logo {
   margin: 30px 30px;
 }
