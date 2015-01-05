@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/citiususc/hipster.git"
+    "url": "https://github.com/hipster4j/hipster4j.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/citiususc/hipster/issues"
+    "url": "https://github.com/hipster4j/hipster4j.github.io/issues"
   },
   "engines": {
     "node": ">=0.10"
@@ -38,7 +38,7 @@
   "licenses": [
     {
       "type": "Apache 2.0",
-      "url": "https://github.com/citiususc/hipster/blob/development/LICENSE"
+      "url": "https://github.com/hipster4j/hipster4j.github.io.git/blob/master/LICENSE"
     }
   ],
   "keywords": [
