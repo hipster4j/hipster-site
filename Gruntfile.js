@@ -242,6 +242,11 @@ module.exports = function(grunt) {
     'copy',
     'assemble'
   ]);
+  
+  grunt.registerTask('deploy', [
+    'build',
+    'optimize'
+  ]);
 
   grunt.registerTask('default', [
     'build'
