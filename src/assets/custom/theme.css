@@ -46,6 +46,11 @@ body > .container.top {
   margin-top: 50px;
 }
 
+.vcenter {
+  display: flex;
+  align-items: center;  
+}
+
 .navbar-toggle .icon-bar {
   background-color: #888;
 }
@@ -119,6 +124,13 @@ body > .container.top {
   background: url(img/jprofiler-brand.png) no-repeat 0 -39px;
 }
 
+.bg-darkgrey {
+  background-color: #2B2B2B; 
+}
+
+.text-white {
+  color: white;
+}
 
 /* ==========================================================================
    Youtube embed video
